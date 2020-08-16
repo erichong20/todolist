@@ -3,11 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Things</title>
+        <title>My To-Do List</title>
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+            <h1>THINGS</h1>
+        </header>
         <div id="content"></div>
+        <div class="form" id="form">
+            <div class="form-header">
+                <h3>New Task</h3>
+                <button class="form-close">&times;</button>
+            </div>
+            <div>
+                <ul class="form-body">
+                    <li class="form-item">
+                        <label class="form-label" for="task-name">Task Name</label>
+                        <input required placeholder="task name" class="form-input" type="text" id="task-name" name="task-name">
+                    </li>
+                    <li class="form-item">
+                        <label class="form-label" for="author">Description</label>
+                        <input required placeholder="task description" class="form-input" type="text" id="description" name="description">
+                    </li>
+                    <li class="form-item">
+                        <label class="form-label" for="pages">Deadline</label>
+                        <input required placeholder="task deadline" class="form-input" type="date" id="deadline" name="deadline">
+                    </li>
+                    <fieldset class="form-radio-fieldset">
+                        <legend class="form-label form-label-radio">Task Priority</legend>
+                        <ul class=form-radio-list>
+                            <li class="form-radio-list-item">
+                                <input type="radio" class="form-radio form-radio-high" id="high" name="high" value="high" required>
+                                <label class="form-label" for="high">High</label>
+                            </li>
+                            <li class="form-radio-list-item">
+                                <input type="radio" id="medium" class="form-radio form-radio-medium" name="medium" value="medium">
+                                <label class="form-label" for="medium">Medium</label>
+                            </li>
+                            <li class="form-radio-list-item">
+                                <input type="radio" id="low" class="form-radio form-radio-low" name="medium" value="low">
+                                <label class="form-label" for="low">Low</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </ul>
+            </div>
+        </div>
+        <div id="overlay"></div>
     </body>
 
     <script type="text/javascript" src="main.js"></script>
